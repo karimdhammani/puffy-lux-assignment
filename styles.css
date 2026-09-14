@@ -692,8 +692,7 @@ html { scroll-behavior: smooth; }
 .submission { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; background: #f5f4f1; border-top: 1px solid var(--border-soft); padding: 80px max(44px, calc((100vw - 1352px) / 2)); }
 .submission__eyebrow { font-size: 14px; letter-spacing: .15em; text-transform: uppercase; color: var(--highlight-strong); margin-bottom: 20px; }
 .submission h2 { font: 400 clamp(32px, 3.1vw, 44px)/1.2 var(--font-serif); letter-spacing: -.02em; color: var(--fill-cta); }
-.submission__figma { display: inline-flex; gap: 32px; align-items: center; margin-top: 28px; min-height: 44px; border-bottom: 1px solid var(--border-sub-strong); font-size: 16px; }
-.submission__figma:hover { color: var(--highlight-strong); }
+.submission__figma { gap: var(--puffy-space-16); margin-top: 28px; text-decoration: none; }
 .submission__letter { max-width: 640px; font-size: 18px; line-height: 1.6; }
 .submission__letter p + p { margin-top: 18px; }
 .submission__signature { padding-top: 12px; font: 400 24px/1.5 var(--font-serif); }
