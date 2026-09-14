@@ -4,8 +4,8 @@ A responsive HTML, CSS, and vanilla JavaScript implementation of Karim Dhammani'
 
 ## Design reference
 
-- [Evening skyline artboard](https://www.figma.com/design/4kqIz7r1wRHhiGfsFMSv4z?node-id=54-1700)
-- [Size selection dialog](https://www.figma.com/design/4kqIz7r1wRHhiGfsFMSv4z?node-id=13-881)
+- [Evening skyline artboard](https://www.figma.com/design/4kqIz7r1wRHhiGfsFMSv4z?node-id=72-2458)
+- [Size selection dialog](https://www.figma.com/design/4kqIz7r1wRHhiGfsFMSv4z?node-id=72-3048)
 
 The 1440 × 900 product fold reuses the existing Puffy typography, tokens, icons, and layout. The supplied `normal.png` and `cutaway.png` replace the earlier hero with the updated, aligned image pair. The personal submission note is an addition below the original artboard. Mobile layouts adapt the desktop design.
 
@@ -29,3 +29,5 @@ The page is an independent assignment prototype. Product prices, offers, and cla
 ## Publish
 
 GitHub Pages serves the repository root on the `main` branch. All website assets are committed locally; Google Fonts supplies Mukta and PT Serif.
+
+The X-ray view lists all eight mattress layers with published thicknesses, using the award glass treatment with a dark backing for readable text. Gallery arrows use centered SVG paths. Financing stays inline, and upgrade gifts use the same ink icon in the page and size dialog.

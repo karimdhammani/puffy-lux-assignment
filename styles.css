@@ -194,35 +194,38 @@
 }
 .pf-media__grip img { width: 16px; height: 16px; }
 
-.pf-media__grip-left  { transform: rotate(90deg); }
-.pf-media__grip-right { transform: rotate(-90deg); }
+.pf-media__grip-left, .pf-media__grip-right { display: block; transform: none; }
 
+
+/* Shared award glass treatment, with a dark backing for readable layer text. */
 .pf-media__legend {
   position: absolute;
   right: var(--puffy-space-24);
   top: 28px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   gap: var(--puffy-space-8);
+  padding: var(--puffy-space-12);
+  border: 1px solid var(--pf-fold-glass-edge);
+  border-radius: var(--puffy-radius-16);
+  background: linear-gradient(var(--fill-amber-glass), var(--fill-amber-glass)), var(--pf-fold-ink-scrim);
+  backdrop-filter: blur(14px) saturate(1.1);
+  -webkit-backdrop-filter: blur(14px) saturate(1.1);
+  color: var(--white);
+  pointer-events: none;
 }
-.pf-media__legend-title { color: var(--text-strong); letter-spacing: 0.16em; }
-
+.pf-media__legend-title { color: var(--white); letter-spacing: 0.16em; }
 .pf-media__layers {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  gap: var(--puffy-space-6);
+  align-items: flex-start;
+  gap: var(--puffy-space-4);
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.pf-media__layers li {
-  padding: 5px var(--puffy-space-12);
-  border-radius: var(--puffy-radius-full);
-  background: var(--pf-fold-ink-scrim);
-  color: var(--white);
-}
+.pf-media__layers li { margin: 0; padding: 0; }
 
 .pf-media__award {
   position: absolute;
@@ -460,7 +463,7 @@
   transition: background-color var(--duration-control) var(--ease-standard);
 }
 .pf-rail__offer:hover { background: var(--pf-fold-offer-tint-hover); }
-.pf-rail__offer-icon { width: 15px; height: 15px; }
+.pf-rail__offer-icon { width: 20px; height: 20px; flex-shrink: 0; }
 .pf-rail__offer-worth { color: var(--highlight-strong); font-weight: var(--puffy-weight-semibold); }
 
 /* --- Reassurance, adjacent to the CTA rather than in a distant row ----- */
@@ -656,14 +659,14 @@ html { scroll-behavior: smooth; }
 .pf-media:has(.pf-media__range:focus-visible) { outline: 3px solid var(--fill-cta); outline-offset: 4px; }
 .pf-media__pill, .pf-media__nav, .pf-media__award { z-index: 2; }
 .pf-media__award { letter-spacing: 0; }
-.is-revealing .pf-media__award { display: none; }
+
 .reveal-labels { position: absolute; inset: 24px 24px auto; display: flex; justify-content: space-between; pointer-events: none; }
 .reveal-labels span, .reveal-hint { padding: 6px 12px; border-radius: 20px; color: white; background: rgba(43,47,68,.85); font-size: 14px; }
 .reveal-hint { position: absolute; top: calc(50% + 40px); left: 50%; transform: translateX(-50%); white-space: nowrap; pointer-events: none; }
 .pf-media__divider .pf-media__grip { left: 50%; }
 .pf-rail__title { white-space: nowrap; }
-.pf-rail__affirm { display: flex; align-items: baseline; }
-.pf-rail__affirm-link { margin-left: auto; }
+.pf-rail__affirm { display: flex; align-items: baseline; justify-content: flex-start; flex-wrap: wrap; gap: var(--puffy-space-4); }
+.pf-rail__affirm-link { margin-left: 0; }
 .pf-rail__included { margin: 10px 0 8px; }
 .pf-rail__ship { margin-top: 12px; }
 .pf-rail__trust { padding: 10px 20px; }
@@ -749,7 +752,13 @@ html { scroll-behavior: smooth; }
  .pf-fold__nav-link { font-size: 14px; }
  .pf-fold__nav-actions { gap: 0; }
  .pf-fold__icon-btn { width: 40px; height: 44px; }
- .pf-media { border-radius: 16px; }
+ .pf-media { border-radius: 16px; min-height: 320px; }
+ .is-revealing .pf-media__award { display: none; }
+ .pf-media__legend { top: 14px; right: 14px; padding: 8px; gap: 8px; border-radius: 12px; }
+ .pf-media__legend-title { font-size: 11px; line-height: 16px; }
+ .pf-media__layers { font-size: 12px; line-height: 16px; gap: 2px; }
+ .is-revealing .reveal-hint { display: none; }
+ .pf-media__divider .pf-media__grip { top: 72%; }
  .pf-media__award { top: 14px; left: 14px; height: 36px; padding: 0 12px 0 8px; gap: 6px; border-radius: 12px; }
  .pf-media__award span { font-size: 11px; line-height: 16px; }
  .pf-media__award img { width: 22px; height: 22px; }
