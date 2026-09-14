@@ -720,7 +720,7 @@ html { scroll-behavior: smooth; }
 /* Reserve space for the header, gallery gap, thumbnails, and bottom breathing room. */
 @media (min-width: 1000px) {
  .pf-media {
-  height: clamp(360px, calc(100dvh - var(--pf-fold-header-h) - 18px - 18px - var(--pf-fold-thumb-h) - 24px), 480px);
+  height: max(360px, calc(100dvh - var(--pf-fold-header-h) - 18px - 18px - var(--pf-fold-thumb-h) - 24px));
   flex-shrink: 0;
  }
  .pf-thumbs { flex-wrap: nowrap; }
@@ -728,7 +728,7 @@ html { scroll-behavior: smooth; }
  .pf-thumbs__all { flex-shrink: 0; white-space: nowrap; }
 }
 @media (min-width: 1000px) and (max-width: 1390px) {
- .pf-fold { --pf-fold-gutter: 32px; --pf-fold-column-gap: 32px; --pf-fold-rail-w: 410px; }
+ .pf-fold { --pf-fold-gutter: 32px; --pf-fold-column-gap: 32px; --pf-fold-rail-w: 410px; --pf-fold-thumb-h: 68px; }
  .pf-rail__title { font-size: 28px; }
  .pf-thumbs { gap: 12px; }
  .pf-thumb { width: 80px; height: 68px; }
