@@ -720,12 +720,20 @@ html { scroll-behavior: smooth; }
 .full-gallery span { display: block; padding: 8px 12px; font-size: 14px; }
 .guide-list li { padding: 14px 0; border-bottom: 1px solid var(--border-soft); }
 .guide-list span { display: block; color: var(--text-soft); }
-@media (min-width: 1441px) { .pf-media { height: auto; aspect-ratio: 844/640; } }
+/* Reserve space for the header, gallery gap, thumbnails, and bottom breathing room. */
+@media (min-width: 1000px) {
+ .pf-media {
+  height: clamp(360px, calc(100dvh - var(--pf-fold-header-h) - 18px - 18px - var(--pf-fold-thumb-h) - 24px), 480px);
+  flex-shrink: 0;
+ }
+ .pf-thumbs { flex-wrap: nowrap; }
+ .pf-thumb { flex-shrink: 1; min-width: 0; }
+ .pf-thumbs__all { flex-shrink: 0; white-space: nowrap; }
+}
 @media (min-width: 1000px) and (max-width: 1390px) {
  .pf-fold { --pf-fold-gutter: 32px; --pf-fold-column-gap: 32px; --pf-fold-rail-w: 410px; }
  .pf-rail__title { font-size: 28px; }
- .pf-media { height: 600px; }
- .pf-thumbs { gap: 12px; flex-wrap: wrap; }
+ .pf-thumbs { gap: 12px; }
  .pf-thumb { width: 80px; height: 68px; }
  .pf-rail__trust { padding-inline: 0; }
 }
