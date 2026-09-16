@@ -1,7 +1,5 @@
 /* ==========================================================================
    PUFFY · FOUNDATIONS — 02 BASE
-   Reset, document defaults, the accessibility floor, and the 22 text styles.
-   Depends on: 01-tokens.css
    ========================================================================== */
 
 *,
@@ -47,27 +45,17 @@ b, strong { font-weight: var(--puffy-weight-bold); }
 
 hr { height: 1px; margin: 0; border: 0; background: var(--border-soft); }
 
-/* --------------------------------------------------------------------------
-   Focus — WCAG 2.2 · 2.4.7 Focus Visible, 2.4.13 Focus Appearance
-   Figma page 05 specifies a 2px ring at 2px offset. Defined once here;
-   never removed without a replacement.
-   ----------------------------------------------------------------------- */
 :focus-visible {
   outline: 2px solid var(--fill-cta);
   outline-offset: 2px;
   border-radius: var(--puffy-radius-2);
 }
 
-/* The dark ring vanishes on the navy ground — invert it. */
 .pf-on-dark :focus-visible,
 .pf-surface--cta :focus-visible {
   outline-color: var(--base-white);
 }
 
-/* --------------------------------------------------------------------------
-   Motion — respect the OS setting. Nothing in this system depends on
-   animation to convey meaning, so cutting it is always safe.
-   ----------------------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -80,21 +68,10 @@ hr { height: 1px; margin: 0; border: 0; background: var(--border-soft); }
 }
 
 /* ==========================================================================
-   TYPE SCALE — all 22 styles from Figma page `03 · Typography`.
-
-   Every class maps to exactly one Figma text style, and the names match:
-   `Puffy/Heading/Product desktop` → `.pf-heading-product-desktop`.
-   Metrics were read back from the library, not transcribed.
-
-   PT Serif carries voice. Mukta carries information. A page that mixes the
-   two jobs reads as two brands.
+   TYPE SCALE
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   Product, editorial & price — PT Serif
-   ----------------------------------------------------------------------- */
-
-/* Puffy/Heading/Product mobile — PT Serif Regular 24/32 */
+/* Product, editorial & price */
 .pf-heading-product-mobile {
   font-family: var(--font-serif);
   font-size: var(--puffy-size-24);
@@ -103,7 +80,6 @@ hr { height: 1px; margin: 0; border: 0; background: var(--border-soft); }
   letter-spacing: var(--puffy-tracking-none);
 }
 
-/* Puffy/Heading/Product desktop — PT Serif Regular 28/36 */
 .pf-heading-product-desktop {
   font-family: var(--font-serif);
   font-size: var(--puffy-size-28);
@@ -112,7 +88,6 @@ hr { height: 1px; margin: 0; border: 0; background: var(--border-soft); }
   letter-spacing: var(--puffy-tracking-none);
 }
 
-/* Puffy/Heading/Product wide — PT Serif Regular 32/40 */
 .pf-heading-product-wide {
   font-family: var(--font-serif);
   font-size: var(--puffy-size-32);
@@ -121,7 +96,6 @@ hr { height: 1px; margin: 0; border: 0; background: var(--border-soft); }
   letter-spacing: var(--puffy-tracking-none);
 }
 
-/* Puffy/Heading/Gallery mobile — PT Serif Regular 20/28 */
 .pf-heading-gallery-mobile {
   font-family: var(--font-serif);
   font-size: var(--puffy-size-20);
@@ -304,11 +278,6 @@ hr { height: 1px; margin: 0; border: 0; background: var(--border-soft); }
 
 /* --------------------------------------------------------------------------
    RESPONSIVE PRODUCT TITLE
-   Figma page 03 records the source's ramp, which is not monotonic:
-   24/32 mobile → 32/40 tablet → 28/36 desktop → 32/40 wide.
-   The dip at desktop is deliberate — the title sits in a narrow purchase
-   rail there, and 32px would wrap. `.pf-heading-product` applies the whole
-   ramp so a page doesn't have to swap classes at breakpoints.
    ----------------------------------------------------------------------- */
 .pf-heading-product {
   font-family: var(--font-serif);

@@ -1,15 +1,5 @@
 /* ==========================================================================
    PUFFY · FOUNDATIONS — 03 COMPONENTS
-   --------------------------------------------------------------------------
-   Every component below was extracted from the source Lux PDP, then
-   generalised: page-specific measurements became tokens, one-off colours
-   became semantic roles, and each pattern gained the states the source
-   was missing (focus, disabled, selected).
-
-   Naming: `pf-` block, `pf-block--modifier`, `pf-block__element`.
-   States are `is-` classes so JS can toggle them without touching styles.
-
-   Components consume TIER 2 tokens only. No raw hex below this line.
    ========================================================================== */
 
 /* ==========================================================================
@@ -20,7 +10,6 @@
 .pf-surface--soft { background: var(--bg-soft); color: var(--text-strong); }
 .pf-surface--offer { background: var(--fill-offer); color: var(--text-strong); }
 
-/* The navy ground. Pairs with `.pf-on-dark` for the inverted focus ring. */
 .pf-surface--cta {
   background: var(--fill-cta);
   color: var(--text-sub-soft);
@@ -32,8 +21,6 @@
 
 /* ==========================================================================
    BUTTON
-   Three intents, three sizes. `--lg` is the primary add-to-cart moment;
-   there should only ever be one on screen at a time.
    ========================================================================== */
 
 .pf-btn {

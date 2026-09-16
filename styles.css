@@ -1,22 +1,5 @@
 /* ==========================================================================
-   PUFFY · LUX HYBRID PDP — ABOVE THE FOLD (desktop 1440 × 900)
-
-   Patterns this page introduces and proves before they earn a place in
-   system/03-components.css:
-
-     .pf-media       the hero frame, its floating controls and the in-place
-                     x-ray reveal
-     .pf-thumbs      the gallery strip
-     .pf-rail        the buy rail
-     .pf-sizes       the size dialog, and .pf-size-card inside it
-
-   Rules kept from the system:
-     · No raw hex. Translucent scrims are mixed from tier-2 tokens with
-       color-mix(), so a rebrand moves them too.
-     · Interactive boundaries use --border-sub-strong (3.35:1), never
-       --border-soft (1.51:1), which is for dividers only.
-     · Every control has resting, hover, focus-visible, selected and
-       disabled states. The focus ring comes from 02-base.css.
+   PUFFY · LUX HYBRID PDP — ABOVE THE FOLD
    ========================================================================== */
 
 .pf-fold {
@@ -398,9 +381,6 @@
   justify-content: space-between;
   gap: var(--puffy-space-16);
   padding: 14px 0;
-  /* The artboard drew these rules with --border-soft (1.51:1). This is a
-     control, so 1.4.11 wants 3:1 on its boundary — the exact defect the
-     audit measured on the live size buttons. Stepped to --border-sub-strong. */
   border-top: 1px solid var(--border-sub-strong);
   border-bottom: 1px solid var(--border-sub-strong);
   background: transparent;
@@ -636,13 +616,9 @@
 
 /* ==========================================================================
    BELOW 1440
-   The artboard is a desktop fold. Nothing narrower was designed, so the
-   layout degrades rather than pretending to be a responsive spec: the rail
-   drops under the media and the fold stops claiming a fixed height.
    ========================================================================== */
 
 
-/* Final Figma frame, interaction states, and responsive adaptations. */
 [hidden] { display: none !important; }
 html { scroll-behavior: smooth; }
 .pf-fold__header, .pf-fold__body { max-width: 1600px; margin-inline: auto; }

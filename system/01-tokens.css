@@ -1,29 +1,7 @@
 /* ==========================================================================
    PUFFY · FOUNDATIONS — 01 TOKENS
    --------------------------------------------------------------------------
-   Reconciled three ways, in this order of authority:
-
-     1. puffy.com/products/puffy-lux-mattress   the source of truth
-     2. Figma · Puffy · Foundations — PDP Style Guide   naming and intent
-     3. this file                                       the implementation
-
-   Every value below was read back from the live site's own :root or measured
-   from a rendered element. Token names match the live site 1:1, so this system
-   can be adopted incrementally rather than as a rewrite.
-
-   FORMAT NOTE. The live site stores colours as space-separated RGB triplets
-   (`--base-black: 51 51 51`) so Tailwind can compose them as
-   `rgb(var(--base-black) / <alpha>)`. This file stores the same colours as hex
-   and rgba, which is what a standalone stylesheet needs. The values are
-   identical; only the notation differs.
-
-   Three tiers, in order. Never skip a tier:
-     1. Primitive  --base-black, --puffy-space-16   raw values, no meaning
-     2. Semantic   --text-strong, --fill-cta        the role the value plays
-     3. Component  --pf-btn-height-lg               a knob one component needs
-
-   Components consume TIER 2. Reaching for a tier-1 primitive inside a
-   component means the semantic layer is missing a token — add it here.
+   Standalone token set for the assignment prototype.
    ========================================================================== */
 
 :root {
@@ -35,10 +13,6 @@
   --base-white: #ffffff;
   --base-black: #333333;
   --base-green: #067a57;
-  /* Source quirk, reproduced deliberately: on the live site --base-red holds
-     the amber value and --base-amber holds the red. Figma mirrors it. Renaming
-     them here would silently diverge from both, so they are left as found and
-     simply not used — reach for the light/dark ramps instead. */
   --base-red: #8f6c1a;
   --base-amber: #c73a3a;
 
@@ -133,7 +107,7 @@
 
   /* ========================================================================
      TIER 1 · PRIMITIVES — Space
-     Figma `puffy/space/*`. A 4px rhythm with 2px and 6px micro-spacing.
+     A 4px rhythm with 2px and 6px micro-spacing.
      ===================================================================== */
   --puffy-space-0: 0px;
   --puffy-space-2: 2px;
@@ -153,7 +127,7 @@
 
   /* ========================================================================
      TIER 1 · PRIMITIVES — Radius
-     Figma `puffy/radius/*`. Most controls use 8px; media surfaces 12–20px.
+     Most controls use 8px; media surfaces use larger radii.
      Live usage by frequency: 9999px (182) · 8px (160) · 20px (153) · 12px (72).
      ===================================================================== */
   --puffy-radius-0: 0px;
@@ -202,11 +176,11 @@
   --puffy-leading-48: 48px;
 
   --puffy-tracking-none: 0;
-  --puffy-tracking-label: 1.4px;   /* Figma: Label/Inside, 1.4px at 14px */
+  --puffy-tracking-label: 1.4px;
 
   /* ========================================================================
      TIER 2 · SEMANTIC — Text
-     Contrast on --bg-base-white, measured:
+     Text colors:
        text/strong      12.63:1  AAA
        text/sub-strong   6.97:1  AA
        text/soft         5.42:1  AA
@@ -226,9 +200,6 @@
 
   /* ========================================================================
      TIER 2 · SEMANTIC — Border
-     WCAG 2.2 · 1.4.11 asks 3:1 for the boundary of a UI component.
-     --border-sub-strong measures 3.35:1 on white and is the interactive
-     default; --border-soft is 1.51:1 and is for dividers only.
      ===================================================================== */
   --border-strong: var(--navy-blue-light-1000);
   --border-sub-strong: var(--solid-beige-600);
@@ -292,9 +263,8 @@
 
   /* ========================================================================
      TIER 2 · SEMANTIC — Elevation
-     The five effect styles in the Figma library, which are the Tailwind
-     shadow scale the live site actually paints. The page is mainly flat:
-     borders and tonal surfaces do the grouping, elevation is the exception.
+     The page is mainly flat: borders and tonal surfaces do the grouping,
+     elevation is the exception.
      ===================================================================== */
   --elevation-subtle: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --elevation-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
@@ -304,8 +274,6 @@
 
   /* ========================================================================
      TIER 2 · SEMANTIC — Motion
-     Durations measured off the live controls. --curve is the live site's own
-     token; --ease-standard is what its buttons actually transition with.
      ===================================================================== */
   --curve: cubic-bezier(0.25, 0.1, 0.25, 1);
   --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
@@ -322,14 +290,13 @@
 
   --navbar-height: 64px;
   --banner-height: 58px;
-  --header-height: 122px;      /* resolved value on the live page */
+  --header-height: 122px;
 
   --rail-width: 100%;          /* stacks below 1025 — see breakpoints */
   --thumb-w: 96px;
   --thumb-h: 80px;
 
-  /* WCAG 2.2 · 2.5.8 sets the floor at 24px. Figma's guidance, and this
-     system's default for new icon-only controls, is 44px. */
+  /* Default touch target for icon-only controls. */
   --target-min: 44px;
 
   /* ========================================================================
@@ -351,7 +318,7 @@
 
 /* ==========================================================================
    RESPONSIVE
-   The purchase rail and thumbnails step at the live site's own breakpoints.
+   The purchase rail and thumbnails step at the prototype breakpoints.
    ========================================================================== */
 
 @media (min-width: 768px) {

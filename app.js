@@ -113,7 +113,6 @@
   setReveal(false);
 
   const galleryNames = ['Evening skyline','Layer construction','Quilted cover detail','Pressure relief','Mattress details','Eight-layer construction','Comfort and support','Cooling layer','Edge support','Puffy Lux lifestyle','Mattress overview'];
-  // Eleven product views, with the generated evening hero replacing the original first image.
   for (let i=1;i<=11;i++) {
     const button = document.createElement('button'); button.type = 'button';
     const img = document.createElement('img'); img.src = i === 1 ? 'assets/normal.png' : `assets/${String(i).padStart(2,'0')}.jpg`; img.alt = ''; img.loading = 'lazy';
