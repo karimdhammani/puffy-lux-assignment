@@ -19,6 +19,8 @@ Open http://localhost:4173. No build step or package installation is required.
 - Select “See what's inside” to reveal the X-ray image on the right. Drag left to expose more; both images keep identical dimensions and cropping.
 - The slider supports touch, pointer, arrow keys, Home (exterior), and End (interior), with reduced-motion support.
 - Browse the image gallery, change the mattress size, and try the session-only prototype cart.
+- Compare the Lux and Royal model cards on the page or in the size dialog; the two stay in sync.
+- Enter a ZIP code to see an estimated delivery window, and expand the in-home setup details.
 - The panel submission note appears below the product fold.
 
 The page is an independent prototype. Product prices, offers, and claims are not a live catalog. No purchases or payments are processed.

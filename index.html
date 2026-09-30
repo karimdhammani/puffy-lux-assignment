@@ -15,6 +15,7 @@
 <link rel="stylesheet" href="system/puffy.css">
 
 <link rel="stylesheet" href="styles.css?v=figma-button-1">
+<link rel="stylesheet" href="v4.css">
 </head>
 
 <body class="pf-fold">
@@ -154,20 +155,6 @@
 
     <hr class="pf-rail__rule">
 
-    <p class="pf-rail__price">
-      <span class="pf-price-large" id="pf-price">$1,549</span>
-      <span class="pf-rail__value">
-        <span class="pf-body-small">(Total Value <s id="pf-value">$2,899</s>)</span>
-        <img src="system/icons/info-dark.svg" class="pf-icon pf-icon--16"
-             alt="Total value is the price of this mattress plus the included upgrade and bedding bundle">
-      </span>
-    </p>
-
-    <p class="pf-body-small pf-rail__affirm">
-      0% APR with Affirm.
-      <a class="pf-rail__affirm-link" href="https://puffy.com/pages/financing" target="_blank" rel="noopener">See if you qualify</a>
-    </p>
-
     <button class="pf-rail__size" type="button" id="pf-size-open" aria-haspopup="dialog">
       <span class="pf-rail__size-current">
         <span class="pf-label-caption pf-uppercase pf-rail__size-key">Size</span>
@@ -181,6 +168,32 @@
     </button>
     <p class="pf-label-caption pf-rail__fit" id="pf-fit">12&quot; Mattress Height · Medium-Plush Feel</p>
 
+    <div class="pf-upg5" role="radiogroup" aria-label="Mattress model">
+      <p class="pf-upg4__label">Current selection</p>
+      <p class="pf-upg4__label">Available upgrades</p>
+      <button class="pf-upg3__card pf-upg5__card" type="button" role="radio" aria-checked="true" tabindex="0" data-model="lux">
+        <span class="pf-upg5__top"><span class="pf-upg3__radio"><img src="system/icons/check-circle.svg" alt=""></span><span class="pf-upg5__tag">Lux Collection</span></span>
+        <img class="pf-upg5__img" src="assets/lux-cutout.png" alt="Puffy Lux Hybrid mattress">
+        <span class="pf-upg5__name">Puffy <b>LUX</b> Hybrid</span>
+        <span class="pf-upg5__specs"><span class="pf-upg5__row"><span class="pf-upg5__k">Layers</span><span class="pf-upg5__v">8</span></span><span class="pf-upg5__row"><span class="pf-upg5__k">Feel</span><span class="pf-upg5__v">Medium-plush</span></span><span class="pf-upg5__row"><span class="pf-upg5__k">Support</span><span class="pf-upg5__v">Wrapped coils</span></span></span>
+        <span class="pf-upg5__foot">
+          <span class="pf-upg4__amount" id="pf-price">$1,549</span>
+          <span class="pf-dlg-was">Worth $2,849</span><span hidden id="pf-value">$2,899</span>
+        </span>
+      </button>
+      <button class="pf-upg3__card pf-upg5__card" type="button" role="radio" aria-checked="false" tabindex="-1" data-model="royal" aria-label="Puffy Royal Hybrid, worth $3,799, free upgrade">
+        <span class="pf-upg5__top"><span class="pf-upg3__radio"><img src="system/icons/check-circle.svg" alt=""></span><span class="pf-upg5__tag pf-upg5__tag--premium">Premium Choice</span></span>
+        <img class="pf-upg5__img" src="assets/royal-cutout.png" alt="Puffy Royal Hybrid mattress">
+        <span class="pf-upg5__name">Puffy <b>ROYAL</b> Hybrid</span>
+        <span class="pf-upg5__specs"><span class="pf-upg5__row"><span class="pf-upg5__k">Layers</span><span class="pf-upg5__v is-diff">10</span></span><span class="pf-upg5__row"><span class="pf-upg5__k">Feel</span><span class="pf-upg5__v is-diff">Ultra-plush</span></span><span class="pf-upg5__row"><span class="pf-upg5__k">Support</span><span class="pf-upg5__v is-diff">5-Zoned coils</span></span></span>
+        <span class="pf-upg5__foot">
+          <span class="pf-upg3__free">Free Upgrade</span>
+          <span class="pf-dlg-was">Worth $3,799</span>
+        </span>
+      </button>
+    </div>
+
+    <p class="pf-free-gift pf-free-gift--rail"><span><b>Free</b> 2 Signature Pillows + 2 Signature Sleep Masks</span></p>
     <div class="pf-rail__cta">
       <button class="pf-btn pf-btn--primary pf-btn--lg pf-rail__cta-btn" type="button" id="pf-add">
         <span class="pf-rail__cta-label" id="pf-cta-label">Add to Cart</span>
@@ -189,38 +202,55 @@
       <button class="pf-rail__offer" type="button" id="pf-offer">
         <img src="system/icons/gift-ink.svg" alt="" class="pf-rail__offer-icon">
         <span class="pf-label-caption">
-          <b>Get the 10-layer Puffy Royal, worth $2,449, at no extra cost.</b>
+          <b>Get the 10-layer Puffy Royal, worth $3,799, at no extra cost.</b>
         </span>
       </button>
     </div>
 
-    <p class="pf-body-small pf-rail__included">
-      + 2 Signature Pillows + 2 Signature Sleep Masks
+    <p class="pf-body-small pf-rail__affirm">
+      0% APR with Affirm.
+      <a class="pf-rail__affirm-link" href="https://puffy.com/pages/financing" target="_blank" rel="noopener">See if you qualify</a>
     </p>
 
-    <p class="pf-rail__ship">
-      <img class="pf-icon pf-icon--20" src="system/icons/delivery.svg" alt="">
-      <span class="pf-body-small" id="pf-ship">Ships in 1–2 days · free delivery &amp; returns</span>
-    </p>
 
     <ul class="pf-rail__trust">
-      <li class="pf-benefit pf-rail__trust-item">
-        <img class="pf-icon pf-icon--28" src="system/icons/sleep-trial.svg" alt="">
-        <span class="pf-label-caption">365-Night<br>Sleep Trial</span>
-      </li>
-      <li class="pf-benefit pf-rail__trust-item">
-        <img class="pf-icon pf-icon--28" src="system/icons/warranty.svg" alt="">
-        <span class="pf-label-caption">Lifetime<br>Warranty</span>
-      </li>
-      <li class="pf-benefit pf-rail__trust-item">
-        <img class="pf-icon pf-icon--28" src="system/icons/badge-chiropractic.svg" alt="">
-        <span class="pf-label-caption">Chiropractic<br>Endorsed</span>
-      </li>
-      <li class="pf-benefit pf-rail__trust-item">
-        <img class="pf-icon pf-icon--28" src="system/icons/usa-flag-ink.svg" alt="">
-        <span class="pf-label-caption">Assembled<br>in USA</span>
-      </li>
+      <li class="pf-benefit pf-rail__trust-item"><img class="pf-icon pf-icon--28" src="system/icons/sleep-trial.svg" alt=""><span class="pf-label-caption">365-Night<br>Sleep Trial</span></li>
+      <li class="pf-benefit pf-rail__trust-item"><img class="pf-icon pf-icon--28" src="system/icons/warranty.svg" alt=""><span class="pf-label-caption">Lifetime<br>Warranty</span></li>
+      <li class="pf-benefit pf-rail__trust-item"><img class="pf-icon pf-icon--28" src="system/icons/badge-chiropractic.svg" alt=""><span class="pf-label-caption">Chiropractic<br>Endorsed</span></li>
+      <li class="pf-benefit pf-rail__trust-item"><img class="pf-icon pf-icon--28" src="system/icons/usa-flag-ink.svg" alt=""><span class="pf-label-caption">Assembled<br>in USA</span></li>
     </ul>
+
+    <div class="pf-v3-card">
+      <div class="pf-v3-card__head">
+        <img class="pf-v3-card__icon" src="system/icons/delivery.svg" alt="">
+        <div class="pf-v3-card__titles">
+          <h3 class="pf-v3-card__title">Free Delivery</h3>
+          <span class="pf-v3-card__sub">Ships in 1–2 days. Enter your ZIP to see when it arrives.</span>
+        </div>
+      </div>
+      <form class="pf-v3-zip" id="pf-zip-form" novalidate>
+        <label class="pf-sr-only" for="pf-zip">ZIP code</label>
+        <input id="pf-zip" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="Enter ZIP Code">
+        <button type="submit" id="pf-zip-btn" disabled>Check ZIP Code</button>
+      </form>
+      <p class="pf-v3-zip__result" id="pf-zip-result" aria-live="polite" hidden></p>
+      <div class="pf-v3-setup">
+        <button class="pf-v3-setup__toggle" type="button" id="pf-setup-toggle" aria-expanded="false" aria-controls="pf-setup-body">
+          <img class="pf-v3-setup__img" src="assets/white-glove.jpg" alt="">
+          <span class="pf-v3-card__titles"><span class="pf-v3-card__title">Full-Service In-Home Setup &amp; Assembly</span><span class="pf-v3-card__sub">Arrives with your mattress delivery</span></span>
+          <img class="pf-v3-setup__chev" src="system/icons/chevron-down.svg" alt="">
+        </button>
+        <div class="pf-v3-setup__body" id="pf-setup-body" hidden>
+          <ul class="pf-v3-setup__list">
+            <li><img src="system/icons/tick-green.svg" alt="">New mattress, base, or bed frame set up in your room</li>
+            <li><img src="system/icons/tick-green.svg" alt="">Old mattress taken away</li>
+            <li><img src="system/icons/tick-green.svg" alt="">Old base or box spring taken away. Just tell us at checkout</li>
+          </ul>
+          <a class="pf-v3-setup__details" href="https://puffy.com/pages/white-glove-delivery" target="_blank" rel="noopener">View Details</a>
+          <p class="pf-v3-setup__note">Select it at checkout, then book your setup after your order arrives.</p>
+        </div>
+      </div>
+    </div>
   </section>
 </main>
 
@@ -231,18 +261,30 @@
 <footer class="submission-footer"><span>Independent design assignment · Interactive prototype</span><span>Product details reflect the assignment design. No purchases are processed.</span></footer>
 
 <dialog class="pf-sizes" id="pf-sizes" aria-labelledby="pf-sizes-title">
-<div class="pf-sizes__head"><div class="pf-sizes__intro"><h2 class="pf-heading-product-wide" id="pf-sizes-title">Choose your size</h2><p class="pf-body-small">Compare mattress widths and lengths below. Not sure which size fits? <button type="button" class="inline-link" id="size-guide-open">View the size guide.</button></p></div><button class="pf-fold__icon-btn" type="button" id="pf-sizes-close" aria-label="Close size selector"><img class="pf-icon" src="system/icons/close.svg" alt=""></button></div>
+<div class="pf-sizes__head"><div class="pf-sizes__intro"><h2 class="pf-heading-product-wide" id="pf-sizes-title">Choose your size and model</h2><p class="pf-body-small">Pick the size that fits your room and who sleeps in it. Not sure? <button type="button" class="inline-link" id="size-guide-open">View the size guide.</button></p></div><button class="pf-fold__icon-btn" type="button" id="pf-sizes-close" aria-label="Close size selector"><img class="pf-icon" src="system/icons/close-ink.svg" alt=""></button></div>
 <div class="pf-sizes__grid" role="radiogroup" aria-label="Mattress size" id="pf-sizes-grid">
-<button class="pf-size-card" type="button" role="radio" aria-checked="false" tabindex="-1" data-size="twin" data-price="749" data-label="Twin" data-width="38" data-length="75" style="--w:38;--l:75"><span class="pf-size-card__scale"><span class="pf-size-card__box "><span>38×75</span></span><span class="size-radio" aria-hidden="true"></span></span><span class="pf-size-card__row"><span class="pf-size-card__name pf-heading-product-desktop">Twin</span><span class="pf-price-small">$749</span></span><span class="pf-body-small pf-size-card__dims">38&quot; × 75&quot; · one piece</span><span class="pf-body-small">Ships in 1–2 days</span></button>
-<button class="pf-size-card" type="button" role="radio" aria-checked="false" tabindex="-1" data-size="twin-xl" data-price="1099" data-label="Twin XL" data-width="38" data-length="80" style="--w:38;--l:80"><span class="pf-size-card__scale"><span class="pf-size-card__box "><span>38×80</span></span><span class="size-radio" aria-hidden="true"></span></span><span class="pf-size-card__row"><span class="pf-size-card__name pf-heading-product-desktop">Twin XL</span><span class="pf-price-small">$1,099</span></span><span class="pf-body-small pf-size-card__dims">38&quot; × 80&quot; · one piece</span><span class="pf-body-small">Ships in 1–2 days</span></button>
-<button class="pf-size-card" type="button" role="radio" aria-checked="false" tabindex="-1" data-size="full" data-price="1349" data-label="Full" data-width="54" data-length="75" style="--w:54;--l:75"><span class="pf-size-card__scale"><span class="pf-size-card__box "><span>54×75</span></span><span class="size-radio" aria-hidden="true"></span></span><span class="pf-size-card__row"><span class="pf-size-card__name pf-heading-product-desktop">Full</span><span class="pf-price-small">$1,349</span></span><span class="pf-body-small pf-size-card__dims">54&quot; × 75&quot; · one piece</span><span class="pf-body-small">Ships in 1–2 days</span></button>
-<button class="pf-size-card" type="button" role="radio" aria-checked="true" tabindex="0" data-size="queen" data-price="1549" data-label="Queen" data-width="60" data-length="80" style="--w:60;--l:80"><span class="pf-size-card__scale"><span class="pf-size-card__box "><span>60×80</span></span><span class="size-radio" aria-hidden="true"></span></span><span class="pf-size-card__row"><span class="pf-size-card__name pf-heading-product-desktop">Queen</span><span class="pf-price-small">$1,549</span></span><span class="pf-body-small pf-size-card__dims">60&quot; × 80&quot; · one piece</span><span class="pf-body-small">Ships in 1–2 days</span></button>
-<button class="pf-size-card" type="button" role="radio" aria-checked="false" tabindex="-1" data-size="king" data-price="1749" data-label="King" data-width="76" data-length="80" style="--w:76;--l:80"><span class="pf-size-card__scale"><span class="pf-size-card__box "><span>76×80</span></span><span class="size-radio" aria-hidden="true"></span></span><span class="pf-size-card__row"><span class="pf-size-card__name pf-heading-product-desktop">King</span><span class="pf-price-small">$1,749</span></span><span class="pf-body-small pf-size-card__dims">76&quot; × 80&quot; · one piece</span><span class="pf-body-small">Ships in 1–2 days</span></button>
-<button class="pf-size-card" type="button" role="radio" aria-checked="false" tabindex="-1" data-size="cal-king" data-price="1749" data-label="Cal King" data-width="72" data-length="84" style="--w:72;--l:84"><span class="pf-size-card__scale"><span class="pf-size-card__box "><span>72×84</span></span><span class="size-radio" aria-hidden="true"></span></span><span class="pf-size-card__row"><span class="pf-size-card__name pf-heading-product-desktop">Cal King</span><span class="pf-price-small">$1,749</span></span><span class="pf-body-small pf-size-card__dims">72&quot; × 84&quot; · one piece</span><span class="pf-body-small">Ships in 1–2 days</span></button>
-<button class="pf-size-card" type="button" role="radio" aria-checked="false" tabindex="-1" data-size="split-king" data-price="2198" data-label="Split King" data-width="76" data-length="80" style="--w:76;--l:80"><span class="pf-size-card__scale"><span class="pf-size-card__box pf-size-card__box--split"><span>76×80</span></span><span class="size-radio" aria-hidden="true"></span></span><span class="pf-size-card__row"><span class="pf-size-card__name pf-heading-product-desktop">Split King</span><span class="pf-price-small">$2,198</span></span><span class="pf-body-small pf-size-card__dims">76&quot; × 80&quot; · two Twin XL mattresses</span><span class="pf-body-small">Ships in 1–2 days</span></button>
-<button class="pf-size-card" type="button" role="radio" aria-checked="false" tabindex="-1" data-size="shq" data-price="1949" data-label="Split Head Queen" data-width="60" data-length="80" style="--w:60;--l:80"><span class="pf-size-card__scale"><span class="pf-size-card__box "><span>60×80</span></span><span class="size-radio" aria-hidden="true"></span></span><span class="pf-size-card__row"><span class="pf-size-card__name pf-heading-product-desktop">Split Head Queen</span><span class="pf-price-small">$1,949</span></span><span class="pf-body-small pf-size-card__dims">60&quot; × 80&quot; · split head</span><span class="pf-body-small">Ships in 1–2 days</span></button>
-<button class="pf-size-card" type="button" role="radio" aria-checked="false" tabindex="-1" data-size="shk" data-price="2249" data-label="Split Head King" data-width="76" data-length="80" style="--w:76;--l:80"><span class="pf-size-card__scale"><span class="pf-size-card__box "><span>76×80</span></span><span class="size-radio" aria-hidden="true"></span></span><span class="pf-size-card__row"><span class="pf-size-card__name pf-heading-product-desktop">Split Head King</span><span class="pf-price-small">$2,249</span></span><span class="pf-body-small pf-size-card__dims">76&quot; × 80&quot; · split head</span><span class="pf-body-small">Ships in 1–2 days</span></button>
-</div><div class="pf-sizes__foot"><p class="pf-sizes__foot-note"><img class="pf-icon pf-icon--20" src="system/icons/gift-ink.svg" alt=""><span class="pf-body-small"><b>Free upgrade to the 10-layer Puffy Royal—worth $2,449, at no extra cost.</b><br>2 Signature Pillows + 2 Signature Sleep Masks with your mattress.</span></p><div class="size-selection"><span class="pf-body-small">Current selection:</span><b id="dialog-selection" class="pf-heading-product-desktop">Queen</b></div><button class="pf-btn pf-btn--primary pf-btn--md" id="dialog-add" type="button">Add to cart</button><button class="pf-btn pf-btn--quiet pf-btn--md" id="pf-sizes-confirm" type="button">Done</button></div></dialog>
+<button class="pf-size-card pf-sz" type="button" role="radio" aria-checked="false" tabindex="-1" data-size="twin" data-price="749" data-label="Twin" data-width="38" data-length="75" style="--w:38;--l:75"><span class="pf-sz__top"><span class="size-radio" aria-hidden="true"></span><span class="pf-sz__name">Twin</span><span class="pf-sz__price">$749</span></span><span class="pf-sz__dims">38" × 75"</span><span class="pf-sz__fit"><span class="pf-sz__who">Best for 1 child or teen</span><span class="pf-sz__note">Bunk beds, kids’ rooms</span></span></button>
+<button class="pf-size-card pf-sz" type="button" role="radio" aria-checked="false" tabindex="-1" data-size="twin-xl" data-price="1099" data-label="Twin XL" data-width="38" data-length="80" style="--w:38;--l:80"><span class="pf-sz__top"><span class="size-radio" aria-hidden="true"></span><span class="pf-sz__name">Twin XL</span><span class="pf-sz__price">$1,099</span></span><span class="pf-sz__dims">38" × 80"</span><span class="pf-sz__fit"><span class="pf-sz__who">Best for 1 tall teen or adult</span><span class="pf-sz__note">Dorms, guest rooms</span></span></button>
+<button class="pf-size-card pf-sz" type="button" role="radio" aria-checked="false" tabindex="-1" data-size="full" data-price="1349" data-label="Full" data-width="54" data-length="75" style="--w:54;--l:75"><span class="pf-sz__top"><span class="size-radio" aria-hidden="true"></span><span class="pf-sz__name">Full</span><span class="pf-sz__price">$1,349</span></span><span class="pf-sz__dims">54" × 75"</span><span class="pf-sz__fit"><span class="pf-sz__who">Best for 1 adult</span><span class="pf-sz__note">Solo sleepers who spread out</span></span></button>
+<button class="pf-size-card pf-sz" type="button" role="radio" aria-checked="true" tabindex="0" data-size="queen" data-price="1549" data-label="Queen" data-width="60" data-length="80" style="--w:60;--l:80"><span class="pf-sz__top"><span class="size-radio" aria-hidden="true"></span><span class="pf-sz__name">Queen</span><span class="pf-sz__price">$1,549</span></span><span class="pf-sz__dims">60" × 80" <span class="pf-sz__pop">Most popular</span></span><span class="pf-sz__fit"><span class="pf-sz__who">Best for 2 adults</span><span class="pf-sz__note">Most couples, most bedrooms</span></span></button>
+<button class="pf-size-card pf-sz" type="button" role="radio" aria-checked="false" tabindex="-1" data-size="king" data-price="1749" data-label="King" data-width="76" data-length="80" style="--w:76;--l:80"><span class="pf-sz__top"><span class="size-radio" aria-hidden="true"></span><span class="pf-sz__name">King</span><span class="pf-sz__price">$1,749</span></span><span class="pf-sz__dims">76" × 80"</span><span class="pf-sz__fit"><span class="pf-sz__who">Best for 2 adults + room to spread</span><span class="pf-sz__note">Couples, kids or pets joining</span></span></button>
+<button class="pf-size-card pf-sz" type="button" role="radio" aria-checked="false" tabindex="-1" data-size="cal-king" data-price="1749" data-label="Cal King" data-width="72" data-length="84" style="--w:72;--l:84"><span class="pf-sz__top"><span class="size-radio" aria-hidden="true"></span><span class="pf-sz__name">Cal King</span><span class="pf-sz__price">$1,749</span></span><span class="pf-sz__dims">72" × 84"</span><span class="pf-sz__fit"><span class="pf-sz__who">Best for 2 tall adults</span><span class="pf-sz__note">Sleepers over 6 ft</span></span></button>
+<button class="pf-size-card pf-sz" type="button" role="radio" aria-checked="false" tabindex="-1" data-size="split-king" data-price="2198" data-label="Split King" data-width="76" data-length="80" style="--w:76;--l:80"><span class="pf-sz__top"><span class="size-radio" aria-hidden="true"></span><span class="pf-sz__name">Split King</span><span class="pf-sz__price">$2,198</span></span><span class="pf-sz__dims">76" × 80" · 2 Twin XL</span><span class="pf-sz__fit"><span class="pf-sz__who">Best for 2 adults, separate sides</span><span class="pf-sz__note">Adjustable bases, different schedules</span></span></button>
+<button class="pf-size-card pf-sz" type="button" role="radio" aria-checked="false" tabindex="-1" data-size="shq" data-price="1949" data-label="Split Head Queen" data-width="60" data-length="80" style="--w:60;--l:80"><span class="pf-sz__top"><span class="size-radio" aria-hidden="true"></span><span class="pf-sz__name">Split Head Queen</span><span class="pf-sz__price">$1,949</span></span><span class="pf-sz__dims">60" × 80" · split head</span><span class="pf-sz__fit"><span class="pf-sz__who">Best for 2 adults on an adjustable base</span><span class="pf-sz__note">Raise one side of the head independently</span></span></button>
+<button class="pf-size-card pf-sz" type="button" role="radio" aria-checked="false" tabindex="-1" data-size="shk" data-price="2249" data-label="Split Head King" data-width="76" data-length="80" style="--w:76;--l:80"><span class="pf-sz__top"><span class="size-radio" aria-hidden="true"></span><span class="pf-sz__name">Split Head King</span><span class="pf-sz__price">$2,249</span></span><span class="pf-sz__dims">76" × 80" · split head</span><span class="pf-sz__fit"><span class="pf-sz__who">Best for 2 adults on an adjustable base</span><span class="pf-sz__note">Wider split-head for couples</span></span></button>
+</div><div class="pf-sizes__upg">
+<div class="pf-upg5 pf-upg5--dialog" role="radiogroup" aria-label="Mattress model">
+  <button class="pf-upg3__card pf-upg5__card" type="button" role="radio" aria-checked="true" tabindex="0" data-model="lux">
+    <span class="pf-upg5__top"><span class="pf-upg3__radio"><img src="system/icons/check-circle.svg" alt=""></span><span class="pf-dlg-cur">Current selection</span><span class="pf-upg5__tag">Lux Collection</span></span>
+    <span class="pf-upg5__body"><img class="pf-upg5__img" src="assets/lux-cutout.png" alt=""><span class="pf-upg5__name">Puffy <b>LUX</b> Hybrid</span><span class="pf-dlg-was">Worth $2,849</span></span>
+    <span class="pf-upg5__specs"><span class="pf-upg5__row"><span class="pf-upg5__k">Layers</span><span class="pf-upg5__v">8</span></span><span class="pf-upg5__row"><span class="pf-upg5__k">Feel</span><span class="pf-upg5__v">Medium-plush</span></span><span class="pf-upg5__row"><span class="pf-upg5__k">Support</span><span class="pf-upg5__v">Wrapped coils</span></span></span>
+  </button>
+  <button class="pf-upg3__card pf-upg5__card" type="button" role="radio" aria-checked="false" tabindex="-1" data-model="royal" aria-label="Puffy Royal Hybrid, worth $3,799, free upgrade">
+    <span class="pf-upg5__top"><span class="pf-upg3__radio"><img src="system/icons/check-circle.svg" alt=""></span><span class="pf-dlg-cur">Current selection</span><span class="pf-upg3__free pf-dlg-free">Free Upgrade</span><span class="pf-upg5__tag pf-upg5__tag--premium">Premium Choice</span></span>
+    <span class="pf-upg5__body"><img class="pf-upg5__img" src="assets/royal-cutout.png" alt=""><span class="pf-upg5__name">Puffy <b>ROYAL</b> Hybrid</span><span class="pf-dlg-was">Worth $3,799</span></span>
+    <span class="pf-upg5__specs"><span class="pf-upg5__row"><span class="pf-upg5__k">Layers</span><span class="pf-upg5__v is-diff">10</span></span><span class="pf-upg5__row"><span class="pf-upg5__k">Feel</span><span class="pf-upg5__v is-diff">Ultra-plush</span></span><span class="pf-upg5__row"><span class="pf-upg5__k">Support</span><span class="pf-upg5__v is-diff">5-Zoned coils</span></span></span>
+  </button>
+</div></div><div class="pf-sizes__foot"><div class="size-selection" aria-live="polite"><span class="pf-body-small">Your selection</span><span class="size-selection__line"><b id="dialog-selection" class="pf-heading-product-desktop">Queen</b><span class="size-selection__model" id="dialog-model">Puffy Lux Hybrid</span></span><span class="pf-free-gift"><span><b>Free</b> 2 Signature Pillows + 2 Signature Sleep Masks</span></span></div><span class="pf-dlg-total"><span class="pf-upg4__amount pf-dlg-price">$1,549</span><span class="pf-upg4__value">Value <s class="pf-dlg-value">$2,899</s></span></span><button class="pf-btn pf-btn--primary pf-btn--md" id="dialog-add" type="button">Add to cart<img src="system/icons/cart.svg" alt="" class="pf-dlg-cart"></button><button class="pf-btn pf-btn--quiet pf-btn--md" id="pf-sizes-confirm" hidden type="button">Done</button></div></dialog>
 
 <dialog class="utility-dialog" id="cart-dialog" aria-labelledby="cart-title"><div class="dialog-heading"><h2 id="cart-title" class="pf-heading-product-wide">Your cart</h2><button class="pf-fold__icon-btn" type="button" data-close aria-label="Close cart"><img class="pf-icon" src="system/icons/close.svg" alt=""></button></div><div id="cart-content"></div><p class="prototype-note">This is an assignment prototype. No order or payment is processed.</p><button class="pf-btn pf-btn--primary pf-btn--md" type="button" data-close>Continue exploring</button></dialog>
 <dialog class="utility-dialog gallery-dialog" id="gallery-dialog" aria-labelledby="gallery-title"><div class="dialog-heading"><h2 id="gallery-title" class="pf-heading-product-wide">Explore the Lux Hybrid</h2><button class="pf-fold__icon-btn" type="button" data-close aria-label="Close gallery"><img class="pf-icon" src="system/icons/close.svg" alt=""></button></div><div class="full-gallery" id="full-gallery"></div></dialog>
@@ -252,6 +294,7 @@
 
 <script src="app.js"></script>
 <script src="analytics.js?v=private-1" defer></script>
+<script src="v4.js"></script>
 <script>
 if(new URLSearchParams(location.search).get('view')==='dialog') document.getElementById('pf-size-open').click();
 if(new URLSearchParams(location.search).get('view')==='reveal') document.getElementById('pf-reveal-btn').click();
